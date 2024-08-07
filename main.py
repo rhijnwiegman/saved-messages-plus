@@ -22,7 +22,7 @@ def handle_response(text: str) -> str:
     return text
 
 # handlers
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def messageHandler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type
     chat_id: int = update.message.chat.id
     message_id: int = update.message.id
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('filter', filter_command))
 
     # messages
-    app.add_handler(MessageHandler(filters.TEXT, handle_message))
+    app.add_handler(MessageHandler(filters.TEXT, messageHandler))
     app.add_handler(CallbackQueryHandler(queryHandler))
 
     # errors
