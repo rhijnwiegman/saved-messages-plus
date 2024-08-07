@@ -1,2 +1,2 @@
-# saved-messages-plus
-Telegram bot that adds features to the built-in Saved Messages chat
+# Saved Messages Plus Telegram Bot
+Telegram bot that acts like the Saved Messages chat and adds categories.
